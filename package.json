@@ -1,0 +1,23 @@
+{
+  "name": "test-app",
+  "version": "1.0.0",
+  "description": "\"# test-app\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gibs13/test-app.git"
+  },
+  "author": "Gabriel Wantz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gibs13/test-app/issues"
+  },
+  "homepage": "https://github.com/Gibs13/test-app#readme",
+  "dependencies": {
+    "alexa-app": "^4.0.1"
+  },
+  "devDependencies": {}
+}
