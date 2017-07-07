@@ -28,7 +28,7 @@ app.intent('sayNumber',
   },
   function(request,response) {
     var number = request.slot('number');
-    response = {
+    return {
              "version": "1.0",
              "response": {
                "directives": [
