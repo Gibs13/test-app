@@ -28,7 +28,45 @@ app.intent('sayNumber',
   },
   function(request,response) {
     var number = request.slot('number');
-    response.say("You asked for the number "+number);
+    response = {
+             "version": "1.0",
+             "response": {
+               "directives": [
+                 {
+                   "type": "Display.RenderTemplate",
+                   "template": {
+                     "type": "BodyTemplate1",
+                     "title": 'Test',
+                     "token": "TestBodyTemplate",
+                     "textContent": {
+                       "primaryText": {
+                         "type": "RichText",
+                         "text": "<font size = '5'>Trying</font>"
+                       }
+                     },
+                     "backButton": "HIDDEN"
+                   }
+                 }
+               ],
+               "outputSpeech": {
+                 "type": "SSML",
+                 "ssml": "<speak>I'm trying</speak>"
+               },
+               "reprompt": {
+                 "outputSpeech": {
+                   "type": "SSML",
+                   "ssml": "<speak>Please answer</speak>"
+                 }
+               },
+               "shouldEndSession": false,
+               "card": {
+                 "type": "Simple",
+                 "title": "Still testing",
+                 "content": "Content of the card"
+               },
+             "sessionAttributes": {}
+           }
+        	};
   }
 );
 
