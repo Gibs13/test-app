@@ -31,23 +31,31 @@ app.intent('sayNumber',
     response.response = {
              "version": "1.0",
              "response": {
+               
                "directives": [
-                 {
-                   "type": "Display.RenderTemplate",
-                   "template": {
-                     "type": "BodyTemplate1",
-                     "title": 'Test',
-                     "token": "TestBodyTemplate",
-                     "textContent": {
-                       "primaryText": {
-                         "type": "RichText",
-                         "text": "<font size = '5'>Trying</font>"
-                       }
-                     },
-                     "backButton": "HIDDEN"
-                   }
-                 }
-               ],
+{ 
+    "type": 'Display.RenderTemplate', 
+    "template": { 
+       "type": "BodyTemplate2",
+       "token": "CheeseDetailView",
+       "backButton": "HIDDEN",
+       "backgroundImage": 'https://www.example.com/background-image1.png',
+       "title": "Parmigiano Reggiano",
+       "image": 'https://www.example.com/parmigiano-reggiano.png',
+       "textContent": {
+    "text":"Parmigiano Reggiano\nCountry of origin: Italy\n\n Parmesan cheese is made from unpasteurized cow’s milk. It has a hard, gritty texture, and is fruity and nutty in taste.",
+	  "type" : "RichText"
+		}
+	}
+} ,
+{
+      "type": "Hint",
+      "hint": {
+        "type": "PlainText",
+        "text": "search for blue cheese"
+      }
+    }
+  ],
                "outputSpeech": {
                  "type": "SSML",
                  "ssml": "<speak>I'm trying</speak>"
