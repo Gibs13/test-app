@@ -33,29 +33,47 @@ app.intent('sayNumber',
              "response": {
                
                "directives": [
-{ 
-    "type": 'Display.RenderTemplate', 
-    "template": { 
-       "type": "BodyTemplate2",
-       "token": "CheeseDetailView",
-       "backButton": "HIDDEN",
-       "backgroundImage": 'https://www.example.com/background-image1.png',
-       "title": "Parmigiano Reggiano",
-       "image": 'https://www.example.com/parmigiano-reggiano.png',
-       "textContent": {
-    "text":"Parmigiano Reggiano\nCountry of origin: Italy\n\n Parmesan cheese is made from unpasteurized cow’s milk. It has a hard, gritty texture, and is fruity and nutty in taste.",
-	  "type" : "RichText"
-		}
-	}
-} ,
-{
-      "type": "Hint",
-      "hint": {
-        "type": "PlainText",
-        "text": "search for blue cheese"
+                 {
+  "type": "Display.RenderTemplate",
+  "template": {
+    "type": "BodyTemplate2",
+    "token": "A2079",
+    "backButton": "VISIBLE",
+    "backgroundImage": {
+      "contentDescription": "Textured grey background",
+      "sources": [
+        {
+          "url": "https://www.example.com/background-image1.png"
+        }
+      ],
+      "title": "My Favorite Car",
+      "image": {
+        "contentDescription": "My favorite car",
+        "sources": [
+          {
+            "url": "https://www.example.com/my-favorite-car.png"
+          }
+        ]
+      },
+      "textContent": {
+        "primaryText": {
+          "text": "See my favorite car",
+          "type": "PlainText"
+        },
+        "secondaryText": {
+          "text": "Custom-painted",
+          "type": "PlainText"
+        },
+        "tertiaryText": {
+          "text": "By me!",
+          "type": "PlainText"
+        }
       }
     }
-  ],
+  }
+}
+
+               ],
                "outputSpeech": {
                  "type": "SSML",
                  "ssml": "<speak>I'm trying</speak>"
