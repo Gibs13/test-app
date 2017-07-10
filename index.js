@@ -14,7 +14,7 @@ app.error = function( exception, request, response ) {
 	console.log(exception)
 	console.log(request);
 	console.log(response);	
-	response.say( 'Sorry an error occured ' + error.message);
+	response.say( 'Sorry an error occured ' + exception.message);
 };
 
 app.intent('sayNumber',
@@ -28,7 +28,7 @@ app.intent('sayNumber',
   },
   function(request,response) {
     var number = request.slot('number');
-    return {
+    let rep = {
              "version": "1.0",
              "response": {
                "directives": [
@@ -66,7 +66,8 @@ app.intent('sayNumber',
                },
              "sessionAttributes": {}
            }
-    }.send();
+    };
+    rep.send();
   }
 );
 
