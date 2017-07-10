@@ -28,7 +28,7 @@ app.intent('sayNumber',
   },
   function(request,response) {
     var number = request.slot('number');
-    let rep = {
+    response.response = {
              "version": "1.0",
              "response": {
                "directives": [
@@ -67,7 +67,7 @@ app.intent('sayNumber',
              "sessionAttributes": {}
            }
     };
-    rep.send();
+    return response.send();
   }
 );
 
