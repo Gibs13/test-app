@@ -85,11 +85,6 @@ app.intent('sayNumber',
                  }
                },
                "shouldEndSession": false,
-               "card": {
-                 "type": "Simple",
-                 "title": "Still testing",
-                 "content": "Content of the card"
-               },
              "sessionAttributes": {}
            }
     };
